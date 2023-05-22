@@ -39,13 +39,16 @@ createApp({
     },
     methods:{
         nextButton(){
-            this.imageActive++
-            if(this.imageActive > this.images.lenght ){
-                this.imageActive = 0
+            this.imageActive++;
+            if(this.imageActive === this.images.length){
+                this.imageActive = 0;
             }
         },
         prevButton(){
-            this.imageActive--
+            this.imageActive--;
+            if(this.imageActive < 0){
+                this.imageActive = this.images.length-1
+            }
         }
     }
 }).mount('#app')
