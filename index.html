@@ -14,7 +14,7 @@
             <div class="slide">
                 <button id="previus" @click="prevButton"><i class="fa-solid fa-arrow-up"></i></button>
                 <div id="items">
-                    <div class= "item active">
+                    <div class="item active" @mouseover="autoplay" @mouseleave="StopAutoPlay">
                         <img :src=images[imageActive].image alt="image">
                         <div class="info">
                             <h4>{{images[imageActive].title}}</h4>
