@@ -25,7 +25,7 @@
                 <button id="next" @click="nextButton"><i class="fa-solid fa-arrow-down"></i></button>
             </div>
             <div id="thumbnail">
-                <div v-for="(img,index) in images" class="thumb" :class="imageActive === index ? '': 'opacity' "><img :src="img.image" alt=""></div>
+                <div v-for="(img,index) in images" class="thumb" :class="imageActive === index ? '': 'opacity' "><img :src="img.image" alt="" @click="clickThumb(index)"></div>
             </div>
         </div>
     </div>

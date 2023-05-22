@@ -49,6 +49,9 @@ createApp({
             if(this.imageActive < 0){
                 this.imageActive = this.images.length-1
             }
+        },
+        clickThumb(indice){
+            this.imageActive= indice;
         }
     }
 }).mount('#app')
