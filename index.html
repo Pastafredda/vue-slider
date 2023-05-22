@@ -12,20 +12,20 @@
     <div id="app">
         <div class="container">
             <div class="slide">
-                <button id="previus"><i class="fa-solid fa-arrow-up"></i></button>
+                <button id="previus" @click="prevButton"><i class="fa-solid fa-arrow-up"></i></button>
                 <div id="items">
-                    <div v-for="img in images" class= "item">
-                        <img :src="img.image" alt="image">
+                    <div class= "item active">
+                        <img :src=images[imageActive].image alt="image">
                         <div class="info">
-                            <h4>{{images.title}}</h4>
-                            <span>{{images.text}}</span>
+                            <h4>{{images[imageActive].title}}</h4>
+                            <span>{{images[imageActive].text}}</span>
                         </div>
                     </div>
                 </div>
-                <button id="next"><i class="fa-solid fa-arrow-down"></i></button>
+                <button id="next" @click="nextButton"><i class="fa-solid fa-arrow-down"></i></button>
             </div>
             <div id="thumbnail">
-                <div v-for="img in images" class="thumb opacity"><img :src="img.image" alt=""></div>
+                <div v-for="img in images" class="thumb"><img :src="img.image" alt=""></div>
             </div>
         </div>
     </div>

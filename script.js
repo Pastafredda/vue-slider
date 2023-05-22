@@ -36,5 +36,16 @@ createApp({
                 }
             ]
         }
+    },
+    methods:{
+        nextButton(){
+            this.imageActive++
+            if(this.imageActive > this.images.lenght ){
+                this.imageActive = 0
+            }
+        },
+        prevButton(){
+            this.imageActive--
+        }
     }
 }).mount('#app')
